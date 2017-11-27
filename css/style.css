@@ -1,0 +1,97 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+div#addLink {
+  position: absolute;
+  width: 56px;
+  right: 90px;
+  top: 22px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #00ADFF;
+  z-index: 2;
+  cursor: pointer;
+}
+
+div#saveButton {
+  position: absolute;
+  width: 56px;
+  right: 20px;
+  top: 22px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #00ADFF;
+  z-index: 2;
+  cursor: pointer;
+}
+
+div#addLink img, div#saveButton img {
+  position: absolute;
+  width: 64%;
+  left: 18%;
+  top: 18%;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  padding: 5px 25px;
+  border-bottom: 1px solid #aaa;
+  z-index: 1;
+}
+
+td {
+  background-color: #fff;
+}
+
+table td:nth-child(1) { width: 26%; }
+table td:nth-child(2) { width: 37%; }
+table td:nth-child(3) { width: 37%; }
+
+table td input {
+  width: 100%;
+  padding: 6px 30px;
+  border: 0px;
+  outline: 0;
+  border: 1px solid transparent;
+  border-left: 1px solid #ddd;
+  -webkit-transition: border 0.1s;
+  -moz-transition: border 0.1s;
+  -o-transition: border 0.1s;
+  -ms-transition: border 0.1s;
+}
+
+table td input:hover, table td input:focus {
+  border: 1px solid #2196f3;
+}
+
+svg.upRow, svg.downRow, svg.deleteRow {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+svg.upRow:hover, svg.downRow:hover {
+    fill: #000;
+}
+
+svg.deleteRow:hover {
+    fill: #f00;
+}
+
+svg.deleteRow {
+  width: 25px;
+  height: 25px;
+}

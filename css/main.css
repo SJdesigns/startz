@@ -1,0 +1,148 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background-color: #3F51B5;
+  display: flex;
+  justify-content: space-between; }
+  header .headerLeft img {
+    position: absolute;
+    height: 40px;
+    left: 50px;
+    top: 5px; }
+  header .headerLeft h1 {
+    position: absolute;
+    left: 50px;
+    top: 7px;
+    margin-top: 0px; }
+    header .headerLeft h1 a {
+      color: #fff;
+      text-decoration: none; }
+  header form #search {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center; }
+    header form #search #searchBox {
+      position: relative;
+      width: 100%;
+      height: 36px;
+      outline: 0;
+      color: #fff;
+      font-size: 13pt;
+      box-sizing: border-box;
+      padding-left: 60px;
+      border: 0px;
+      background-color: rgba(0, 0, 0, 0.1); }
+      header form #search #searchBox:hover, header form #search #searchBox:focus {
+        background-color: rgba(0, 0, 0, 0.16); }
+      header form #search #searchBox:not(:placeholder-shown) ~ #deleteSearch {
+        display: block; }
+    header form #search ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    header form #search #searchLogo {
+      position: absolute;
+      width: 25px;
+      top: 14px;
+      left: 18px; }
+    header form #search #deleteSearch {
+      position: absolute;
+      width: 25px;
+      right: 18px;
+      top: 14px;
+      border-radius: 50%;
+      z-index: 2;
+      display: none;
+      cursor: pointer; }
+      header form #search #deleteSearch:hover {
+        background-color: #E53935; }
+  header .headerRight {
+    position: relative;
+    width: auto;
+    height: 100%; }
+    header .headerRight #session {
+      position: relative;
+      width: 60px;
+      height: 100%; }
+      header .headerRight #session img {
+        width: 40px;
+        margin-top: 5px;
+        height: 40px;
+        border-radius: 50%; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif; }
+
+body {
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/wallpaper.jpg);
+  background-size: 100%;
+  opacity: 0.2; }
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 10px; }
+  section a.link {
+    outline: 0; }
+    section a.link:focus article, section a.link article:hover {
+      background-color: rgba(0, 0, 0, 0.18); }
+    section a.link article {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 70px;
+      padding: 16px;
+      margin: 7px 0px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.1);
+      box-sizing: border-box; }
+      section a.link article img {
+        position: relative;
+        float: left;
+        width: 40px; }
+      section a.link article p {
+        position: relative;
+        float: left;
+        margin: 10px 0px;
+        margin-left: 22px;
+        font-size: 13pt; }
+  section div#editCircle {
+    position: fixed;
+    width: 60px;
+    right: 35px;
+    bottom: 25px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    -ms-transition: box-shadow 0.2s; }
+    section div#editCircle:hover {
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); }
+    section div#editCircle a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block; }
+    section div#editCircle img {
+      position: absolute;
+      width: 64%;
+      left: 18%;
+      top: 18%; }
+
+/*# sourceMappingURL=main.css.map */

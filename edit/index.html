@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>editar - startz</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/edit.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/edit.js"></script>
+</head>
+<body>
+	<header>
+		<div class="headerLeft">
+      		<img src="../img/favicon.png" />
+      		<h1><a href="../index.html">startz</a></h1>
+		</div>
+	  	<form action="http://www.google.com/search" method="get">
+			<div id="search">
+				<img id="searchLogo" src="../img/search.svg" />
+				<input id="searchBox" type="text" name="q" value="" placeholder="buscar" autofocus />
+				<input type="submit" style="display:none" />
+				<svg id="deleteSearch" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+					<path d="M0 0h24v24H0z" fill="none"/>
+				</svg>
+			</div>
+		</form>
+		<div class="headerRight">
+		</div>
+    	<div id="addLink">
+        	<img src="../img/add.svg" />
+    	</div>
+    	<div id="saveButton">
+      		<img src="../img/save.svg" />
+		</div>
+    </header>
+    <section>
+		<div class="configSettings">
+			<div class="configAvatar">
+				<p>Usuario
+					<input id="configUsername" type="text" placeholder="nombre del usuario" />
+					<input id="configAvatar" type="text" placeholder="avatar del usuario" />
+				</p>
+			</div>
+			<div class="searchEngine">
+				<p>Motor de búsqueda
+					<select>
+						<option value="google">Google</option>
+						<option value="bing">Bing</option>
+						<option value="yahoo">Yahoo!</option>
+						<option value="DuckDuckGo">DuckDuckGo</option>
+					</select>
+				</p>
+			</div>
+		</div>
+    	<div id="tablaCuadros">
+    	</div>
+    </section>
+</body>
+</html>

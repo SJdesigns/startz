@@ -1,0 +1,89 @@
+$headerColor: #3F51B5
+$secondColor: #00ADFF
+
+header
+    position: relative
+    width: 100%
+    height: 50px
+    color: #fff
+    background-color: $headerColor
+    display: flex
+    justify-content: space-between
+
+    .headerLeft
+        img
+            position: absolute
+            height: 40px
+            left: 50px
+            top: 5px
+        h1
+            position: absolute
+            left: 50px
+            top: 7px
+            margin-top: 0px
+
+            a
+                color: #fff
+                text-decoration: none
+
+    form
+        #search
+            position: relative
+            width: 800px
+            height: 100%
+            margin: 0px 20px
+            display: flex
+            align-items: center
+
+            #searchBox
+                position: relative
+                width: 100%
+                height: 36px
+                outline: 0
+                color: #fff
+                font-size: 13pt
+                box-sizing: border-box
+                padding-left: 60px
+                border: 0px
+                background-color: rgba(#000, .1)
+                &:hover, &:focus
+                    background-color: rgba(#000,.16)
+                &:not(:placeholder-shown) ~ #deleteSearch
+                    display: block
+
+            ::-webkit-input-placeholder
+                color: rgba(#fff,.7)
+
+            #searchLogo
+                position: absolute
+                width: 25px
+                top: 14px
+                left: 18px
+
+            #deleteSearch
+                position: absolute
+                width: 25px
+                right: 18px
+                top: 14px
+                border-radius: 50%
+                z-index: 2
+                display: none
+                cursor: pointer
+                &:hover
+                    background-color: #E53935
+
+    .headerRight
+        position: relative
+        width: auto
+        height: 100%
+
+        #session
+            position: relative
+            width: 60px
+            height: 100%
+
+            img
+                width: 40px
+                margin-top: 5px
+                height: 40px
+                border-radius: 50%

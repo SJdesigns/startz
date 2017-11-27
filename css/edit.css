@@ -1,0 +1,191 @@
+header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background-color: #3F51B5;
+  display: flex;
+  justify-content: space-between; }
+  header .headerLeft img {
+    position: absolute;
+    height: 40px;
+    left: 50px;
+    top: 5px; }
+  header .headerLeft h1 {
+    position: absolute;
+    left: 50px;
+    top: 7px;
+    margin-top: 0px; }
+    header .headerLeft h1 a {
+      color: #fff;
+      text-decoration: none; }
+  header form #search {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center; }
+    header form #search #searchBox {
+      position: relative;
+      width: 100%;
+      height: 36px;
+      outline: 0;
+      color: #fff;
+      font-size: 13pt;
+      box-sizing: border-box;
+      padding-left: 60px;
+      border: 0px;
+      background-color: rgba(0, 0, 0, 0.1); }
+      header form #search #searchBox:hover, header form #search #searchBox:focus {
+        background-color: rgba(0, 0, 0, 0.16); }
+      header form #search #searchBox:not(:placeholder-shown) ~ #deleteSearch {
+        display: block; }
+    header form #search ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    header form #search #searchLogo {
+      position: absolute;
+      width: 25px;
+      top: 14px;
+      left: 18px; }
+    header form #search #deleteSearch {
+      position: absolute;
+      width: 25px;
+      right: 18px;
+      top: 14px;
+      border-radius: 50%;
+      z-index: 2;
+      display: none;
+      cursor: pointer; }
+      header form #search #deleteSearch:hover {
+        background-color: #E53935; }
+  header .headerRight {
+    position: relative;
+    width: auto;
+    height: 100%; }
+    header .headerRight #session {
+      position: relative;
+      width: 60px;
+      height: 100%; }
+      header .headerRight #session img {
+        width: 40px;
+        margin-top: 5px;
+        height: 40px;
+        border-radius: 50%; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif; }
+
+body {
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+div#addLink {
+  position: absolute;
+  width: 56px;
+  right: 90px;
+  top: 22px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #00ADFF;
+  z-index: 2;
+  cursor: pointer; }
+
+div#saveButton {
+  position: absolute;
+  width: 56px;
+  right: 20px;
+  top: 22px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #00ADFF;
+  z-index: 2;
+  cursor: pointer; }
+
+div#addLink img, div#saveButton img {
+  position: absolute;
+  width: 64%;
+  left: 18%;
+  top: 18%; }
+
+div.configSettings {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  display: flex; }
+  div.configSettings div.searchEngine, div.configSettings div.configAvatar {
+    position: relative;
+    height: auto;
+    padding: 0px 35px; }
+    div.configSettings div.searchEngine p, div.configSettings div.configAvatar p {
+      font-size: 13pt; }
+      div.configSettings div.searchEngine p select, div.configSettings div.configAvatar p select {
+        width: 150px;
+        height: 28px;
+        padding: 0px 10px;
+        outline: 0;
+        border: 1px solid #ccc;
+        -webkit-transition: border 0.1s;
+        -moz-transition: border 0.1s;
+        -o-transition: border 0.1s;
+        -ms-transition: border 0.1s; }
+        div.configSettings div.searchEngine p select:hover, div.configSettings div.searchEngine p select:focus, div.configSettings div.configAvatar p select:hover, div.configSettings div.configAvatar p select:focus {
+          border: 1px solid #00ADFF; }
+      div.configSettings div.searchEngine p input, div.configSettings div.configAvatar p input {
+        padding: 0px 10px;
+        height: 28px;
+        outline: 0;
+        border: 1px solid #ccc;
+        -webkit-transition: border 0.1s;
+        -moz-transition: border 0.1s;
+        -o-transition: border 0.1s;
+        -ms-transition: border 0.1s; }
+        div.configSettings div.searchEngine p input:hover, div.configSettings div.searchEngine p input:focus, div.configSettings div.configAvatar p input:hover, div.configSettings div.configAvatar p input:focus {
+          border: 1px solid #00ADFF; }
+
+table {
+  width: 100%; }
+  table th {
+    padding: 5px 25px;
+    border-bottom: 1px solid #aaa;
+    z-index: 1; }
+  table td {
+    background-color: #fff; }
+    table td:nth-child(1) {
+      width: 26%; }
+    table td:nth-child(2) {
+      width: 37%; }
+    table td:nth-child(3) {
+      width: 37%; }
+    table td input {
+      width: 100%;
+      padding: 6px 30px;
+      border: 0px;
+      outline: 0;
+      border: 1px solid transparent;
+      border-left: 1px solid #ddd;
+      -webkit-transition: border 0.1s;
+      -moz-transition: border 0.1s;
+      -o-transition: border 0.1s;
+      -ms-transition: border 0.1s; }
+      table td input:hover, table td input:focus {
+        border: 1px solid #2196f3; }
+    table td svg.upRow, table td svg.downRow, table td svg.deleteRow {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      display: inline-block; }
+    table td svg.upRow:hover, table td svg.downRow:hover {
+      fill: #000; }
+    table td svg.deleteRow {
+      width: 25px;
+      height: 25px; }
+    table td svg.deleteRow:hover {
+      fill: #f00; }
+
+/*# sourceMappingURL=edit.css.map */

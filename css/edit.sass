@@ -1,0 +1,129 @@
+@import _header
+
+*
+    padding: 0px
+    margin: 0px
+    font-family: sans-serif
+
+body
+    background-color: #f4f4f4
+    overflow-x: hidden
+    overflow-y: auto
+
+div#addLink
+    position: absolute
+    width: 56px
+    right: 90px
+    top: 22px
+    height: 56px
+    border-radius: 50%
+    background-color: #00ADFF
+    z-index: 2
+    cursor: pointer
+
+div#saveButton
+    position: absolute
+    width: 56px
+    right: 20px
+    top: 22px
+    height: 56px
+    border-radius: 50%
+    background-color: #00ADFF
+    z-index: 2
+    cursor: pointer
+
+div#addLink img, div#saveButton img
+    position: absolute
+    width: 64%
+    left: 18%
+    top: 18%
+
+div.configSettings
+    position: relative
+    width: 100%
+    height: auto
+    padding: 25px 30px
+    box-sizing: border-box
+    display: flex
+
+    div.searchEngine, div.configAvatar
+        position: relative
+        height: auto
+        padding: 0px 35px
+
+        p
+            font-size: 13pt
+
+            select
+                width: 150px
+                height: 28px
+                padding: 0px 10px
+                outline: 0
+                border: 1px solid #ccc
+                -webkit-transition: border 0.1s
+                -moz-transition: border 0.1s
+                -o-transition: border 0.1s
+                -ms-transition: border 0.1s
+                &:hover, &:focus
+                    border: 1px solid $secondColor
+
+            input
+                padding: 0px 10px
+                height: 28px
+                outline: 0
+                border: 1px solid #ccc
+                -webkit-transition: border 0.1s
+                -moz-transition: border 0.1s
+                -o-transition: border 0.1s
+                -ms-transition: border 0.1s
+                &:hover, &:focus
+                    border: 1px solid $secondColor
+
+table
+    width: 100%
+
+    th
+        padding: 5px 25px
+        border-bottom: 1px solid #aaa
+        z-index: 1
+
+    td
+        background-color: #fff
+
+        &:nth-child(1)
+            width: 26%
+        &:nth-child(2)
+            width: 37%
+        &:nth-child(3)
+            width: 37%
+
+        input
+            width: 100%
+            padding: 6px 30px
+            border: 0px
+            outline: 0
+            border: 1px solid transparent
+            border-left: 1px solid #ddd
+            -webkit-transition: border 0.1s
+            -moz-transition: border 0.1s
+            -o-transition: border 0.1s
+            -ms-transition: border 0.1s
+
+            &:hover, &:focus
+                border: 1px solid #2196f3
+
+        svg.upRow, svg.downRow, svg.deleteRow
+            position: relative
+            width: 30px
+            height: 30px
+            display: inline-block
+
+        svg.upRow:hover, svg.downRow:hover
+            fill: #000
+
+        svg.deleteRow
+            width: 25px
+            height: 25px
+
+        svg.deleteRow:hover
+            fill: #f00
