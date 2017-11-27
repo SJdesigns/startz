@@ -147,7 +147,7 @@ section {
     z-index: 2; }
     section div#editCircle:hover {
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); }
-      section div#editCircle:hover ~ div#editCircleShadow {
+      section div#editCircle:hover:not(.editCircleAnimation) ~ div#editCircleShadow {
         animation: editBtn 1.5s linear infinite; }
     section div#editCircle a {
       position: absolute;
