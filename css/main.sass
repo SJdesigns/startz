@@ -84,7 +84,7 @@ section
         &:hover
             box-shadow: 2px 2px 8px rgba(#000,.15)
 
-            & ~ div#editCircleShadow
+            &:not(.editCircleAnimation) ~ div#editCircleShadow
                 animation: editBtn 1.5s linear infinite
 
         a
