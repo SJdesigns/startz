@@ -1,14 +1,17 @@
+if (localStorage.getItem('startz-items') == null) { localStorage.setItem('startz-items','[]'); }
+if (localStorage.getItem('startz-settings') == null) { localStorage.setItem('startz-settings',JSON.stringify({'avatar':'','username':'','searchEngine':''})); }
+
+var settings = JSON.parse(localStorage.getItem('startz-settings'));
+var items = JSON.parse(localStorage.getItem('startz-items'));
+
+var engines = [
+	{'name':'google','search':'http://www.google.com/search','queryVar':'q'},
+	{'name':'bing','search':'https://www.bing.com/search','queryVar':'q'},
+	{'name':'yahoo','search':'https://es.search.yahoo.com/search','queryVar':'p'},
+	{'name':'DuckDuckGo','search':'https://duckduckgo.com','queryVar':'q'}
+];
+
 $(function() {
-	var settings = JSON.parse(localStorage.getItem('startz-settings'));
-	var items = JSON.parse(localStorage.getItem('startz-items'));
-
-	var engines = [
-		{'name':'google','search':'http://www.google.com/search','queryVar':'q'},
-		{'name':'bing','search':'https://www.bing.com/search','queryVar':'q'},
-		{'name':'yahoo','search':'https://es.search.yahoo.com/search','queryVar':'p'},
-		{'name':'DuckDuckGo','search':'https://duckduckgo.com','queryVar':'q'}
-	];
-
 	cont = 0;
 	box = '<table border="0"><thead><tr><th>Título</th><th>Logotipo</th><th>Enlace</th><th></th><th></th><th></th></tr></thead><tbody>';
 	for (i in items) {
@@ -25,6 +28,9 @@ $(function() {
 		box += '</tr>';
 		cont++;
 	}
+	if (items.length == 0) {
+		box += '<tr id="noResults"><td colspan="4" align=center>No hay enlaces todavía</td></tr>';
+	}
 	box += '</tbody></table>';
 
 	$('#tablaCuadros').html(box);
@@ -39,19 +45,21 @@ $(function() {
 			newRow += '<td><svg class="downRow" fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/><path d="M0-.75h24v24H0z" fill="none"/></svg></td>';
 			newRow += '<td><svg class="deleteRow" fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg></td>';
 		newRow += '</tr>';
+		$('tr#noResults').hide();
 		$('#tablaCuadros').find('table').find('tbody').append(newRow);
 		boton();
 	});
 
 	$('#configUsername').val(settings.username);
 	$('#configAvatar').val(settings.avatar);
-	$('.searchEngine').find('select').val(settings.searchEngine).change();
+	$('.searchEngine').find('select').val('google').change();
 
 	for (i in engines) {
 		if (engines[i]['name'] == settings.searchEngine) {
 			$('header').find('form').attr('action',engines[i].search);
 			$('#searchBox').attr('name',engines[i].queryVar);
 			$('#searchBox').attr('placeholder','buscar con ' + engines[i].name);
+			$('.searchEngine').find('select').val(settings.searchEngine).change();
 		}
 	}
 

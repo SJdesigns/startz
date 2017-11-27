@@ -26,6 +26,18 @@ section
     height: auto
     margin-top: 10px
 
+    #noResults
+        position: relative
+        margin: 90px auto
+        width: 400px
+        color: #333
+        max-width: 100%
+        padding: 0px 50px
+        box-sizing: border-box
+        font-size: 15pt
+        text-align: center
+        line-height: 1.5em
+
     a.link
         outline: 0
 
@@ -67,9 +79,13 @@ section
         -moz-transition: box-shadow 0.2s
         -o-transition: box-shadow 0.2s
         -ms-transition: box-shadow 0.2s
+        z-index: 2
 
         &:hover
             box-shadow: 2px 2px 8px rgba(#000,.15)
+
+            & ~ div#editCircleShadow
+                animation: editBtn 1.5s linear infinite
 
         a
             position: absolute
@@ -82,3 +98,48 @@ section
             width: 64%
             left: 18%
             top: 18%
+
+    div#editCircleShadow
+        position: fixed
+        width: 60px
+        right: 35px
+        height: 60px
+        bottom: 25px
+        border-radius: 50%
+        background-color: rgba(#2196f3,.4)
+
+    div.editCircleAnimation
+        img
+            animation: editIcon 14s 2s infinite
+        & ~ div#editCircleShadow
+            animation: editBtn 2s linear infinite
+
+@keyframes editBtn
+    0%
+        width: 60px
+        right: 35px
+        height: 60px
+        bottom: 25px
+        background-color: rgba(#2196f3,.4)
+    50%
+        width: 90px
+        right: 20px
+        height: 90px
+        bottom: 10px
+        background-color: rgba(#2196f3,.25)
+    100%
+        width: 60px
+        right: 35px
+        height: 60px
+        bottom: 25px
+        background-color: rgba(#2196f3,.4)
+
+@keyframes editIcon
+    0%
+        transform: rotate(0deg)
+    7%
+        transform: rotate(380deg)
+    14%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(0deg)

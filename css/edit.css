@@ -5,7 +5,8 @@ header {
   color: #fff;
   background-color: #3F51B5;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 10; }
   header .headerLeft img {
     position: absolute;
     height: 40px;
@@ -150,6 +151,10 @@ div.configSettings {
 
 table {
   width: 100%; }
+  table tr#noResults td {
+    width: 100%;
+    color: #333;
+    padding: 5px 0px; }
   table th {
     padding: 5px 25px;
     border-bottom: 1px solid #aaa;

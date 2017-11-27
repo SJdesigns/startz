@@ -33,8 +33,8 @@
 	'searchEngine':'google'
 };*/
 
-if (localStorage.getItem('startz-items') == null) { localStorage.setItem('startz-items',''); }
-if (localStorage.getItem('startz-settings') == null) { localStorage.setItem('startz-settings',''); }
+if (localStorage.getItem('startz-items') == null) { localStorage.setItem('startz-items','[]'); }
+if (localStorage.getItem('startz-settings') == null) { localStorage.setItem('startz-settings',JSON.stringify({'avatar':'','username':'','searchEngine':''})); }
 
 var engines = [
 	{'name':'google','search':'http://www.google.com/search','queryVar':'q'},
@@ -62,7 +62,8 @@ $(function() {
 	}
 
 	if (items.length==0) {
-		box += '<p class="noResults">Todavía no tienes enlaces disponibles</p>';
+		box += '<div id="noResults"><p class="noResults">Todavía no has añadido enlaces a esta página</p></div>';
+		$('#editCircle').addClass('editCircleAnimation');
 	}
 	$('#itemContainer').html(box);
 
